@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid contact-form" id="contact-form">
+    <h1>Upload a Flying Site</h1>
+    <form method="post" action="." enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-signup btn-danger right">Submit</button>
+    </form>
+</div>
+
+
+
+
+{%endblock%}
