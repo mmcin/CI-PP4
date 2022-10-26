@@ -23,3 +23,10 @@ def NotAuthorised(request):
         request,
         "not_authorised.html",
     )
+
+# displays the uploaded flying sites 
+class SiteList(generic.ListView):
+    model = FlyingSite
+    queryset = FlyingSite.objects.filter(status=1).order_by('-updated_on')
+    template_name = 'site_list.html'
+    paginate_by = 8
