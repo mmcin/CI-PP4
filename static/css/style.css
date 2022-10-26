@@ -34,3 +34,24 @@ nav a {
 .navbar-brand {
     letter-spacing: 0.5rem;
 }
+
+.navbar-toggler-icon {
+    color: #fafafa;
+    margin: 50 auto 0 auto;
+}
+
+#hamburger-icon {
+    margin-top: 5px;
+}
+
+#user {
+    font-size: 0.8rem;
+    color: #007bff;
+    padding-right: 20px;
+}
+
+#username {
+    font-size: 0.8rem;
+    color: #fafafa;
+
+}
