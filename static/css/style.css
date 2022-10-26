@@ -131,3 +131,22 @@ nav a {
 #footer span {
     color: #fafafa;
 }
+
+#card {
+    background-color: #fafafa;
+    color: black;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#card h2 {
+    margin-top: 10px;
+}
+
+#wind-direction {
+    color: #e30713;
+}
+
+a:hover {
+    text-decoration: none;
+}
