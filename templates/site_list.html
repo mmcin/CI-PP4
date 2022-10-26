@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid" id="body">
+    <div class="row">
+        <!-- if user is logged in we will show an upload link else we will show a login link -->
+        {% if user.is_authenticated %}
+        <div id="upload-header">
+            <h1>Add a site to the listings <a href="{% url 'site_upload' %}">HERE</a></h1>
+        </div>
+        {% else %}
+        <div id="upload-header">
+            <h1>Sign in <a href="{% url 'account_login' %}">HERE</a> to add a site to the database</h1>
+        </div>
+        {% endif %}
+
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                <!-- if the site is approved by admin it will be shown here -->
+                {% for site in flyingsite_list %}
+                {% if site.approved %}
+                <div class="col-md-4" id="site-card">
+                    <a href="{% url 'site_detail' site.slug %}" class="post-link">
+                        <div class="card shadow mb-4">
+                            <div class="card-body" id="card">
+                                <div class="image-container">
+                                    {% if "placeholder" in site.featured_image.url %}
+                                    <img class="card-img-top"
+                                        src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ site.featured_image.url }}">
+                                    {% endif %}
+                                </div>
+                                <h2 id="wind-direction">{{ site.wind_direction }}</h2>
+                                <h2 class="card-title">{{ site.site_name }}</h2>
+                                <hr>
+
+                                <p class="card-text text-muted h6">Updated on: {{ site.updated_on }}</p>
+                                <div class="image-flash">
+                                    <p class="author">Added by: {{ site.pilot }}</p>
+                                </div>
+                                <!-- edit and delete buttons that will only be shown if the user is the site author -->
+                                {% if user == site.pilot %}
+                                <a href="/edit/{{ site.id }}"><button class="btn btn-primary">EDIT</button></a>
+                                <a href="/delete/{{ site.id }}"><button class="btn btn-danger">DELETE</button></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- pagination code -->
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+
+{%endblock%}
