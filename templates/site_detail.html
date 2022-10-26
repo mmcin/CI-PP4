@@ -47,6 +47,59 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid" id="comment-section">
+        <div class="row">
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 card mb-4  mt-3 ">
+                <h3>Comments:</h3>
+                <div class="card-body">
+                    <!-- comments will be looped through and displayed -->
+                    {% for comment in comments %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ comment.name }}
+                            <span class=" text-muted font-weight-normal">
+                                {{ comment.created_on }}
+                            </span> wrote:
+                        </p>
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    <!-- if the logged in user is the author then edit and delete buttons will be displayed -->
+                    {% if user.username == comment.name %}
+                    <a href="/site_comment_edit/{{ comment.id }}"><button class="btn btn-primary">EDIT</button></a>
+                    <a href="/site_comment_delete/{{ comment.id }}"><button class="btn btn-danger">DELETE</button></a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% if user.is_authenticated %}
+        <div class="row">
+            <div class="card mb-4 mt-3 p-0">
+                <div class="card-body">
+                    <!-- if the comment was submitted then an alert is shown otherwise the comment input is shown-->
+                    {% if commented %}
+                    <div class="alert alert-success" role="alert">
+                        Your comment is awaiting approval
+                    </div>
+                    {% else %}
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-signup btn-outline-dark btn-lg">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     {%endblock%}
