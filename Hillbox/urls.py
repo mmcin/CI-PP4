@@ -15,6 +15,7 @@ urlpatterns = [
     path('edit/<site_id>', views.EditSite, name='edit'),
     path('delete/<site_id>', views.DeleteSite, name='delete'),
     path('sites/<slug:slug>/', views.SiteDetail.as_view(), name='site_detail'),
+    path('site_upload/', views.UploadFlyingSite, name='site_upload'),
     path('site_comment_edit/<comment_id>', views.EditComment, name='site_comment_edit'),
     path('site_comment_delete/<comment_id>', views.DeleteComment, name='site_comment_delete'),
     path('contact/', views.Contacto, name='contact'),
