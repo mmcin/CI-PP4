@@ -150,3 +150,40 @@ nav a {
 a:hover {
     text-decoration: none;
 }
+
+.headings {
+    color: #e30713;
+}
+
+/* login */
+
+#login-container {
+    padding-top: 70px;
+    min-height: 90vh;
+    background-color: #0062cc;
+    color: #fafafa;
+}
+
+#signup-span {
+    color: orange;
+}
+
+#logout-container {
+    padding-top: 70px;
+    min-height: 90vh;
+    background-color: #0062cc;
+    color: #fafafa;
+    padding-left: 30px;
+}
+
+#signup-container {
+    padding-top: 70px;
+    min-height: 90vh;
+    background-color: #0062cc;
+    color: #fafafa;
+    padding-left: 30px;
+}
+
+#signup-orange {
+    color: orange;
+}
