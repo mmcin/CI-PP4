@@ -30,3 +30,10 @@ class SiteList(generic.ListView):
     queryset = FlyingSite.objects.filter(status=1).order_by('-updated_on')
     template_name = 'site_list.html'
     paginate_by = 8
+
+# displays the images on the gallery page
+class PhotoList(generic.ListView):
+    model = Photo
+    queryset = Photo.objects.filter(status=1).order_by('-updated_on')
+    template_name = 'gallery.html'
+    paginate_by = 8
