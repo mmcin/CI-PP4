@@ -5,7 +5,7 @@ from django.contrib import admin
 from .models import FlyingSite, Comment, Photo, PhotoComment
 
 # this is the admin for the FlyingSite 
-models@admin.register(FlyingSite)
+@admin.register(FlyingSite)
 class FlyingSiteAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('site_name',)}
     actions = ['approve_sites']
