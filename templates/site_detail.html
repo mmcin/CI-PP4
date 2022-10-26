@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container-fluid" id="body">
+    <div class="row">
+
+        <!-- site details column -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                <div class="col-md-12" id="site-card">
+                    <div class="card shadow mb-4">
+                        <div class="card-body" id="card">
+                            <div class="image-container">
+                                <!-- if the entry doesn't have an image a placeholder will be displayed -->
+                                {% if "placeholder" in site.featured_image.url %}
+                                <img class="card-img-top"
+                                    src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ site.featured_image.url }}">
+                                {% endif %}
+                            </div>
+                            <h2 id="wind-direction">{{ site.wind_direction }}</h2>
+                            <h1 class="post-title">{{ site.site_name }}</h1>
+                            <p class="post-subtitle">{{ site.pilot }} | {{ site.updated_on }}</p>
+                            <hr>
+                            <p class="headings">Overview:</p>
+                            <p class="card-text ">
+                                {{ site.overview | safe }}
+                            </p>
+                            <hr>
+                            <p class="headings">Landing Information:</p>
+                            <p class="card-text ">
+                                {{ site.landing_information | safe }}
+                            </p>
+                            <hr>
+                            <p class="headings">Warnings:</p>
+                            <p class="card-text ">
+                                {{ site.warnings | safe }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+            </div>
+        </div>
+    </div>
+
+
+    {%endblock%}
