@@ -157,7 +157,7 @@ class PhotoDetail(View):
         comments = photo.comments.filter(approved=True).order_by("-created_on")
         return render(
             request,
-            "photo_detail.html",
+            "gallery_detail.html",
             {
             "photo":photo,
             "comments":comments,
@@ -181,7 +181,7 @@ class PhotoDetail(View):
 
         return render(
             request,
-            "photo_detail.html",
+            "gallery_detail.html",
             {
                 "photo": photo,
                 "comments": comments,

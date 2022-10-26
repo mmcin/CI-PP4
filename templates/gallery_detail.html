@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+
+
+<div class="container-fluid" id="body">
+    <div class="row">
+
+        <!-- Gallery images will be rendered here -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+
+                <div class="col-md-12" id="site-card">
+
+                    <div class="card shadow mb-4">
+                        <div class="card-body" id="card">
+                            <div class="image-container">
+                                {% if "placeholder" in photo.featured_image.url %}
+                                <img class="card-img-top"
+                                    src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
+                                {% else %}
+                                <img class="card-img-top" src=" {{ photo.featured_image.url }}">
+                                {% endif %}
+                            </div>
+                            <h2 class="card-title">{{ photo.site_name }}</h2>
+                            <p>Uploaded by: {{ photo.uploaded_by }}</p>
+                            <p>Updated on: {{ photo.updated_on }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- comments will be rendered here -->
+<div class="container-fluid" id="comment-section">
+    <div class="row">
+        <div class="col">
+            <hr>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 card mb-4  mt-3 ">
+            <h3>Comments:</h3>
+            <div class="card-body">
+                {% for comment in comments %}
+                <div class="comments" style="padding: 10px;">
+                    <p class="font-weight-bold">
+                        {{ comment.name }}
+                        <span class=" text-muted font-weight-normal">
+                            {{ comment.created_on }}
+                        </span> wrote:
+                    </p>
+                    {{ comment.body | linebreaks }}
+                </div>
+                {% else %}
+                <p>No comment to display</p>
+                {% endif %}
+                <!-- if user is author then edit and delete buttons will be shown here -->
+                {% if user.username == comment.name %}
+                <a href="/site_comment_edit/{{ comment.id }}"><button class="btn btn-primary">EDIT</button></a>
+                <a href="/site_comment_delete/{{ comment.id }}"><button class="btn btn-danger">DELETE</button></a>
+            </div>
+        </div>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="row">
+        <div class="card mb-4 mt-3 p-0">
+            <div class="card-body">
+                <!-- if user has not commented then an input will be displayed or else an alert -->
+                {% if commented %}
+                <div class="alert alert-success" role="alert">
+                    Your comment is awaiting approval
+                </div>
+                {% else %}
+                <h3>Leave a comment:</h3>
+                <p>Posting as: {{ user.username }}</p>
+                <form method="post" style="margin-top: 1.3em;">
+                    {{ comment_form | crispy }}
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-signup btn-outline-dark btn-lg">Submit</button>
+                </form>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}
