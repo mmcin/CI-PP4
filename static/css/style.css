@@ -81,3 +81,44 @@ nav a {
     bottom: 15px;
     color: #fafafab0;
 }
+
+/* footer */
+#footer {
+    height: 50px;
+    width: 100vw;
+    background-color: #e30713;
+    color: #fafafa !important;
+    font-size: 2rem;
+    margin: 0 auto;
+    background-image: linear-gradient(-1deg, #cd454c, #e30713);
+    display: relative;
+}
+
+#footer a {
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#footer span {
+    font-size: 0.8rem;
+    float: right;
+    font-weight: 400;
+    margin-top: 14px;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#footer-container {
+    border-top: 1px solid #3d0303;
+    border-bottom: 1px solid #fafafa;
+    text-align: center;
+}
+
+#footer li {
+    display: inline-block;
+}
+
+#footer i,
+#footer span {
+    color: #fafafa;
+}
