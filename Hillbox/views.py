@@ -244,3 +244,15 @@ def EditPhotoComment(request, comment_id):
     else: 
         return redirect('not_authorised')
     return render(request, 'site_comment_edit.html', {'form': form})
+
+# deletes a comment on a gallery image
+def DeletePhotoComment(request, comment_id):
+    comment = get_object_or_404(PhotoComment, id = comment_id)
+    form = PhotoCommentForm(instance = comment)
+    if request.user.username == comment.name:
+        if request.method == "POST":         
+            comment.delete()
+            return HttpResponseRedirect('/sites')
+    else: 
+        return redirect('not_authorised')
+    return render(request, 'site_comment_delete.html', {'form': form})  
