@@ -78,3 +78,44 @@ def DeleteSite(request, site_id):
     else:
         return redirect('not_authorised')
     return render(request, 'site_delete.html', {'form': form})
+
+class SiteDetail(View):
+    def get(self, request, slug, *args, **kwargs):
+        model = FlyingSite
+        queryset = FlyingSite.objects.filter(status=1)
+        site = get_object_or_404(queryset, slug = slug)
+        comments = site.comments.filter(approved=True).order_by("-created_on")
+        return render(
+            request,
+            "site_detail.html",
+            {
+            "site":site,
+            "comments":comments,
+            "commented":False,
+            "comment_form": CommentForm(),
+            }
+        )
+# posts the comments to the flying site model
+    def post(self, request, slug, *args, **kwargs):
+        queryset = FlyingSite.objects.filter(status=1)
+        site = get_object_or_404(queryset, slug=slug)
+        comments = site.comments.filter(approved=True).order_by("-created_on")
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.site = site
+            comment.save()
+        else:
+            comment_form = CommentForm()
+
+        return render(
+            request,
+            "site_detail.html",
+            {
+                "site": site,
+                "comments": comments,
+                "commented": True,
+                "comment_form": comment_form,
+            },
+        )
