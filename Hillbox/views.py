@@ -189,3 +189,15 @@ class PhotoDetail(View):
                 "comment_form": comment_form,
                 },
         )
+
+# handles uploading of a gallery image
+def UploadGalleryImage(request):
+    gallery_form = GalleryUpload(request.POST, request.FILES)
+   
+    if request.method == "POST":
+        if gallery_form.is_valid():
+            gallery_form.instance.uploaded_by = request.user
+            gallery_done = gallery_form.save(commit=False)
+            gallery_done.save()
+        return HttpResponseRedirect('/gallery')
+    return render(request, 'gallery_upload.html', {'form': gallery_form}) 
