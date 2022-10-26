@@ -12,3 +12,25 @@
     background-color: #007bff;
     min-height: 100vh;
 }
+
+/* navbar */
+
+nav {
+    border-top: 1px solid #fafafa;
+    background-image: linear-gradient(-360deg, #cd454c, #e30713);
+    font-family: 'Montserrat', sans-serif;
+    color: #fafafa;
+    font-weight: 400;
+}
+
+nav a {
+    color: #fafafa;
+}
+
+#navbar {
+    width: 100vw;
+}
+
+.navbar-brand {
+    letter-spacing: 0.5rem;
+}
