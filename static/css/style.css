@@ -197,3 +197,24 @@ a:hover {
     padding-left: 5vw;
     padding-bottom: 50px;
 }
+
+#upload-header {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+#upload-header a {
+    color: orange;
+}
+
+#upload-header h1 {
+    color: #fafafa;
+}
+
+main {
+    background-color: #007bff;
+}
+
+.card-body {
+    padding: 5px;
+}
