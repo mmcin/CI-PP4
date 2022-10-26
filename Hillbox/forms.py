@@ -18,3 +18,9 @@ class CommentForm(forms.ModelForm):
     class Meta: 
         model = Comment
         fields = ('body',)
+
+# this is the form to comment on a gallery image
+class PhotoCommentForm(forms.ModelForm):
+    class Meta:
+        model = PhotoComment
+        fields = ('body',)
