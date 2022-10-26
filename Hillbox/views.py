@@ -200,4 +200,17 @@ def UploadGalleryImage(request):
             gallery_done = gallery_form.save(commit=False)
             gallery_done.save()
         return HttpResponseRedirect('/gallery')
-    return render(request, 'gallery_upload.html', {'form': gallery_form}) 
+    return render(request, 'gallery_upload.html', {'form': gallery_form})
+
+# handles the deleting of a gallery image 
+def DeleteGallery(request, photo_id, uploaded_by):
+    photo = get_object_or_404(Photo, id = photo_id)
+    form = GalleryUpload(instance = photo)
+    if request.user == photo.uploaded_by:    
+        if request.method == "POST":
+            form = GalleryUpload(request.POST, instance = photo)
+            photo.delete()
+            return HttpResponseRedirect('/gallery')
+    else:
+        return redirect('not_authorised')
+    return render(request, 'gallery_delete.html', {'form': form})  
