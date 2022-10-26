@@ -255,4 +255,26 @@ def DeletePhotoComment(request, comment_id):
             return HttpResponseRedirect('/sites')
     else: 
         return redirect('not_authorised')
-    return render(request, 'site_comment_delete.html', {'form': form})  
+    return render(request, 'site_comment_delete.html', {'form': form}) 
+
+# handles the contact form and sends an email to the admin team 
+def Contacto(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = "Website Inquiry" 
+            body = {
+            'first_name': form.cleaned_data['first_name'], 
+            'email': form.cleaned_data['email_address'], 
+            'message':form.cleaned_data['message'], 
+    }
+            message = "\n".join(body.values())
+
+            try:
+                send_mail(subject, message, os.environ.get("MY_EMAIL"), [os.environ.get("RECEIVE_EMAIL")]) 
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect ("contact")
+
+    form = ContactForm()
+    return render(request, "contact.html", {'form':form}) 
