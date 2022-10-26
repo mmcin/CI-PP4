@@ -55,3 +55,29 @@ nav a {
     color: #fafafa;
 
 }
+
+/* hero section */
+#hero {
+    position: relative;
+}
+
+#hero-image {
+    width: 100vw;
+    height: auto;
+}
+
+#hero-text {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    left: 15px;
+    top: 15px;
+    color: #fafafab0;
+}
+
+#hero-button {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    left: 15px;
+    bottom: 15px;
+    color: #fafafab0;
+}
