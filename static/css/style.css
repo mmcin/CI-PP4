@@ -59,6 +59,7 @@ nav a {
 /* hero section */
 #hero {
     position: relative;
+    background-color: #007bff;
 }
 
 #hero-image {
@@ -80,6 +81,13 @@ nav a {
     left: 15px;
     bottom: 15px;
     color: #fafafab0;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    background-color: #007bff;
+    color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* footer */
