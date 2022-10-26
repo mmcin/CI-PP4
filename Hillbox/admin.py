@@ -38,3 +38,14 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+# this is the photo comment admin
+@admin.register(PhotoComment)
+class PhotoCommentAdmin(admin.ModelAdmin):
+    actions = ['approve_comments']
+    list_display = ('photo', 'created_on', 'approved')
+    list_filter = ('approved', 'created_on')
+    search_fields = ['photo', 'name']
+
+    def approve_comments(self, request, queryset):
+        queryset.update(approved=True)
