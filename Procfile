@@ -1,1 +1,1 @@
-web: gunicorn Hillbox.wsgi
+web: gunicorn FlyingSitesAPI.wsgi
