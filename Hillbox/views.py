@@ -214,3 +214,18 @@ def DeleteGallery(request, photo_id, uploaded_by):
     else:
         return redirect('not_authorised')
     return render(request, 'gallery_delete.html', {'form': form})  
+
+# handles the editing of a gallery image
+def EditGallery(request, photo_id, uploaded_by):
+    photo = get_object_or_404(Photo, id = photo_id)
+    form = GalleryUpload(instance = photo)
+    if request.user == photo.uploaded_by: 
+        if request.method == "POST":
+            form = GalleryUpload(request.POST, request.FILES, instance = photo)
+            if form.is_valid():
+                
+                form.save()
+                return HttpResponseRedirect('/gallery')
+    else:
+        return redirect('not_authorised')
+    return render(request, 'gallery_edit.html', {'form': form})
