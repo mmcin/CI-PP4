@@ -9,4 +9,5 @@ urlpatterns = [
     path('edit/<site_id>', views.EditSite, name='edit'),
     path('delete/<site_id>', views.DeleteSite, name='delete'),
     path('sites/<slug:slug>/', views.SiteDetail.as_view(), name='site_detail'),
+    path('site_comment_edit/<comment_id>', views.EditComment, name='site_comment_edit'),
 ]
