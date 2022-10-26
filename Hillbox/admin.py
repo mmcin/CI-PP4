@@ -27,3 +27,14 @@ class PhotoAdmin(admin.ModelAdmin):
     
     def approve_photos(self, request, queryset):
         queryset.update(approved=True)
+
+# this admin is for the flying site comments
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    actions = ['approve_comments']
+    list_display = ('site', 'created_on', 'approved', 'name')
+    list_filter = ('approved', 'created_on')
+    search_fields = ['site', 'name']
+
+    def approve_comments(self, request, queryset):
+        queryset.update(approved=True)
