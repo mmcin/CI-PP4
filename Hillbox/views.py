@@ -16,3 +16,10 @@ def index(request):
         request,
         "index.html",
     )
+
+# displays the error page when user doesn't have permissions
+def NotAuthorised(request):
+    return render(
+        request,
+        "not_authorised.html",
+    )
