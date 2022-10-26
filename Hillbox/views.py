@@ -229,3 +229,18 @@ def EditGallery(request, photo_id, uploaded_by):
     else:
         return redirect('not_authorised')
     return render(request, 'gallery_edit.html', {'form': form})
+
+# edits a comment on a gallery image
+def EditPhotoComment(request, comment_id):
+    comment = get_object_or_404(PhotoComment, id=comment_id)
+    form = PhotoCommentForm(instance=comment)
+    if request.user.username == comment.name:
+        if request.method == "POST":
+            form = PhotoCommentForm(request.POST, request.FILES, instance=comment)
+            if form.is_valid():
+                form.save(commit=False)
+                form.save()
+            return HttpResponseRedirect('/sites')
+    else: 
+        return redirect('not_authorised')
+    return render(request, 'site_comment_edit.html', {'form': form})
