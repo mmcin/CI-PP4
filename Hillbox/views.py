@@ -147,3 +147,45 @@ def DeleteComment(request, comment_id):
     else: 
         return redirect('not_authorised')
     return render(request, 'site_comment_delete.html', {'form': form})
+
+# handles the detailed view of the images in gallery
+class PhotoDetail(View):
+    def get(self, request, slug, *args, **kwargs):
+        model = Photo
+        queryset = Photo.objects.filter(status=1)
+        photo = get_object_or_404(queryset, slug = slug)
+        comments = photo.comments.filter(approved=True).order_by("-created_on")
+        return render(
+            request,
+            "photo_detail.html",
+            {
+            "photo":photo,
+            "comments":comments,
+            "commented":False,
+            "comment_form": PhotoCommentForm(),
+            }
+        )
+    def post(self, request, slug, *args, **kwargs):
+        queryset = Photo.objects.filter(status=1)
+        photo = get_object_or_404(queryset, slug=slug)
+        comments = photo.comments.filter(approved=True).order_by("-created_on")
+        comment_form = PhotoCommentForm(data=request.POST)
+        if comment_form.is_valid():
+            
+            comment_form.instance.name = request.user.username
+            comment = comment_form.save(commit=False)
+            comment.photo = photo
+            comment.save()
+        else:
+            comment_form = PhotoCommentForm()
+
+        return render(
+            request,
+            "photo_detail.html",
+            {
+                "photo": photo,
+                "comments": comments,
+                "commented": True,
+                "comment_form": comment_form,
+                },
+        )
