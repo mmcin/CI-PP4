@@ -32,4 +32,21 @@ class FlyingSite(models.Model):
 
     def __str__(self):
         return self.site_name
+
+# this is where I will store the photos for the gallery
+class Photo(models.Model):
+    featured_image = CloudinaryField('image', default='placeholder')
+    uploaded_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="photo")
+    site_name = models.CharField(max_length = 150, unique=True)
+    updated_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    status = models.IntegerField(choices = STATUS, default = 0)
+    slug = models.SlugField(max_length=200, unique=True)
+
+    class Meta:
+        ordering = ["-updated_on"]
+
+    def __str__(self):
+        return self.site_name 
+    
    
