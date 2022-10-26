@@ -11,6 +11,7 @@ urlpatterns = [
     path('gallery/delete/<uploaded_by>/<photo_id>', views.DeleteGallery, name='delete_gallery'),
     path('gallery/edit/<uploaded_by>/<photo_id>', views.EditGallery, name='edit_gallery'),
     path('photo_comment_edit/<comment_id>', views.EditPhotoComment, name='photo_comment_edit'),
+    path('photo_comment_delete/<comment_id>', views.DeletePhotoComment, name='photo_comment_delete'),
     path('edit/<site_id>', views.EditSite, name='edit'),
     path('delete/<site_id>', views.DeleteSite, name='delete'),
     path('sites/<slug:slug>/', views.SiteDetail.as_view(), name='site_detail'),
