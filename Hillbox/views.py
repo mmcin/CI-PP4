@@ -79,6 +79,7 @@ def DeleteSite(request, site_id):
         return redirect('not_authorised')
     return render(request, 'site_delete.html', {'form': form})
 
+# shows a more detailed view of a flying site
 class SiteDetail(View):
     def get(self, request, slug, *args, **kwargs):
         model = FlyingSite
@@ -119,3 +120,18 @@ class SiteDetail(View):
                 "comment_form": comment_form,
             },
         )
+
+# edits a comment on a flying site
+def EditComment(request, comment_id):
+    comment = get_object_or_404(Comment, id = comment_id)
+    form = CommentForm(instance = comment)
+    if request.user.username == comment.name:
+        if request.method == "POST":
+            form = CommentForm(request.POST, request.FILES, instance = comment)
+            if form.is_valid():
+                form.save(commit=False)
+                form.save()
+            return HttpResponseRedirect('/sites')
+    else: 
+        return redirect('not_authorised')
+    return render(request, 'site_comment_edit.html', {'form': form})
