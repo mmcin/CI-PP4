@@ -37,3 +37,15 @@ class PhotoList(generic.ListView):
     queryset = Photo.objects.filter(status=1).order_by('-updated_on')
     template_name = 'gallery.html'
     paginate_by = 8
+
+# uploads a new flying site
+def UploadFlyingSite(request):
+    site_form = SiteUpload(request.POST, request.FILES)
+    if request.method == "POST":
+        if site_form.is_valid():
+            site_form.instance.pilot = request.user
+            site_done = site_form.save(commit=False)
+            site_done.save()
+        return HttpResponseRedirect('/sites')
+        
+    return render(request, 'site_upload.html', {'form': site_form})  
