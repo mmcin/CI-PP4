@@ -65,3 +65,16 @@ def EditSite(request, site_id):
         return redirect('not_authorised')
 
     return render(request, 'site_edit.html', {'form': form})  
+
+# delete a site in flyingsite model
+def DeleteSite(request, site_id):
+    site = get_object_or_404(FlyingSite, id = site_id)
+    form = SiteUpload(instance = site)
+    if request.user == site.pilot:
+        if request.method == "POST":
+            form = SiteUpload(request.POST, instance = site)
+            site.delete()
+            return HttpResponseRedirect('/sites')
+    else:
+        return redirect('not_authorised')
+    return render(request, 'site_delete.html', {'form': form})
