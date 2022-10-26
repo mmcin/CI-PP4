@@ -9,7 +9,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['hillbox-pp4.herokuapp.com', '127.0.0.1']
-
+SITE_ID = 1
 
 # Application definition
 
@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'Hillbox'
+    'Hillbox',
 ]
 
 MIDDLEWARE = [
