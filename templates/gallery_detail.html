@@ -49,6 +49,7 @@
         <div class="col-md-12 card mb-4  mt-3 ">
             <h3>Comments:</h3>
             <div class="card-body">
+                <!-- comments will be looped through and displayed -->
                 {% for comment in comments %}
                 <div class="comments" style="padding: 10px;">
                     <p class="font-weight-bold">
@@ -59,13 +60,12 @@
                     </p>
                     {{ comment.body | linebreaks }}
                 </div>
-                {% else %}
-                <p>No comment to display</p>
-                {% endif %}
-                <!-- if user is author then edit and delete buttons will be shown here -->
+                <!-- if the logged in user is the author then edit and delete buttons will be displayed -->
                 {% if user.username == comment.name %}
                 <a href="/site_comment_edit/{{ comment.id }}"><button class="btn btn-primary">EDIT</button></a>
                 <a href="/site_comment_delete/{{ comment.id }}"><button class="btn btn-danger">DELETE</button></a>
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@
     <div class="row">
         <div class="card mb-4 mt-3 p-0">
             <div class="card-body">
-                <!-- if user has not commented then an input will be displayed or else an alert -->
+                <!-- if the comment was submitted then an alert is shown otherwise the comment input is shown-->
                 {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval
@@ -92,4 +92,6 @@
         </div>
     </div>
 </div>
+
+
 {%endblock%}
