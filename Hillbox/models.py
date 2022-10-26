@@ -48,5 +48,19 @@ class Photo(models.Model):
 
     def __str__(self):
         return self.site_name 
+
+# this is where I will store the comments related to the flying site model
+class Comment(models.Model):
+    site = models.ForeignKey(FlyingSite, on_delete=models.CASCADE, related_name="comments", null=True, blank=True)
+    name = models.CharField(max_length=100, default="Unknown Pilot")
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+    
+    class Meta:
+        ordering = ["created_on"]
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.name}"
     
    
