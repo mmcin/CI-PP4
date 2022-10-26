@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid" id="body">
+    <div class="row">
+        {% if user.is_authenticated %}
+        <div id="upload-header">
+            <h1>Add an image to the gallery <a href="{% url 'gallery_upload' %}">HERE</a></h1>
+        </div>
+        {% else %}
+        <div id="upload-header">
+            <h1>Sign in <a href="{% url 'account_login' %}">HERE</a> to add an image to the gallery</h1>
+        </div>
+        {% endif %}
+        <!-- Gallery entries rendered here if approved -->
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for photo in photo_list %}
+                {% if photo.approved %}
+                <div class="col-md-4" id="site-card">
+                    <a href="{% url 'photo_detail' photo.slug %}" class="post-link">
+                        <div class="card shadow mb-4">
+                            <div class="card-body" id="card">
+                                <div class="image-container">
+                                    {% if "placeholder" in photo.featured_image.url %}
+                                    <img class="card-img-top"
+                                        src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
+                                    {% else %}
+                                    <img class="card-img-top" src=" {{ photo.featured_image.url }}">
+                                    {% endif %}
+                                </div>
+                                <h2 class="card-title">{{ photo.site_name }}</h2>
+                                <!-- if user is author then edit and delete buttons will be rendered -->
+                                {% if user == photo.uploaded_by %}
+                                <a href="edit/{{ photo.uploaded_by }}/{{ photo.id }}"><button
+                                        class="btn btn-primary">EDIT</button></a>
+                                <a href="delete/{{ photo.uploaded_by }}/{{ photo.id }}"><button
+                                        class="btn btn-danger">DELETE</button></a>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+            </div>
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- pagination handled here -->
+    {% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+
+{%endblock%}
