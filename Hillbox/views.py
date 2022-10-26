@@ -49,3 +49,19 @@ def UploadFlyingSite(request):
         return HttpResponseRedirect('/sites')
         
     return render(request, 'site_upload.html', {'form': site_form})  
+
+# edit a site in flyingsite model
+def EditSite(request, site_id):
+    site = get_object_or_404(FlyingSite, id = site_id)
+    form = SiteUpload(instance = site)
+    if request.user == site.pilot:
+        if request.method == "POST":
+            form = SiteUpload(request.POST, request.FILES, instance = site)
+            if form.is_valid():
+                form.save(commit=False)
+                form.save()
+            return HttpResponseRedirect('/sites')
+    else: 
+        return redirect('not_authorised')
+
+    return render(request, 'site_edit.html', {'form': form})  
