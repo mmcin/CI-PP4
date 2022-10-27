@@ -81,10 +81,10 @@ def DeleteSite(request, site_id):
 
 # shows a more detailed view of a flying site
 class SiteDetail(View):
-    def get(self, request, site_name, *args, **kwargs):
+    def get(self, request, id, *args, **kwargs):
         model = FlyingSite
         queryset = FlyingSite.objects.filter(status=1)
-        site = get_object_or_404(queryset, site_name = site_name)
+        site = get_object_or_404(queryset, id = id)
         comments = site.comments.filter(approved=True).order_by("-created_on")
         return render(
             request,
@@ -97,9 +97,9 @@ class SiteDetail(View):
             }
         )
 # posts the comments to the flying site model
-    def post(self, request, site_name, *args, **kwargs):
+    def post(self, request, id, *args, **kwargs):
         queryset = FlyingSite.objects.filter(status=1)
-        site = get_object_or_404(queryset, site_name=site_name)
+        site = get_object_or_404(queryset, id=id)
         comments = site.comments.filter(approved=True).order_by("-created_on")
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
