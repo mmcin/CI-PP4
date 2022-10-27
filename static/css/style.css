@@ -11,6 +11,7 @@
 #body {
     background-color: #007bff;
     min-height: 100vh;
+    min-width: 100vw;
 }
 
 /* navbar */
@@ -60,6 +61,11 @@ nav a {
 #hero {
     position: relative;
     background-color: #007bff;
+}
+
+#hero-header {
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #hero-image {
