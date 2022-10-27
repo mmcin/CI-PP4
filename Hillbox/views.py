@@ -243,7 +243,7 @@ def EditPhotoComment(request, comment_id):
             return HttpResponseRedirect('/sites')
     else: 
         return redirect('not_authorised')
-    return render(request, 'site_comment_edit.html', {'form': form})
+    return render(request, 'gallery_comment_edit.html', {'form': form})
 
 # deletes a comment on a gallery image
 def DeletePhotoComment(request, comment_id):
