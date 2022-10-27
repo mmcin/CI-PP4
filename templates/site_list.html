@@ -21,7 +21,7 @@
                 {% for site in flyingsite_list %}
                 {% if site.approved %}
                 <div class="col-md-4" id="site-card">
-                    <a href="{% url 'site_detail' site.slug %}" class="post-link">
+                    <a href="{% url 'site_detail' site.site_name %}" class="post-link">
                         <div class="card shadow mb-4">
                             <div class="card-body" id="card">
                                 <div class="image-container">

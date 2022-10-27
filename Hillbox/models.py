@@ -17,7 +17,7 @@ class FlyingSite(models.Model):
         ('W', 'W'),)
     site_name = models.CharField(max_length = 150, unique=True)
     wind_direction = models.CharField(max_length = 150, choices=WIND_CHOICES)
-    slug = models.SlugField(max_length=200, unique=True, default = "12345")
+    # slug = models.SlugField(max_length=200, unique=True, default = "12345")
     pilot = models.ForeignKey(User, on_delete=models.CASCADE, related_name="flying_sites")
     updated_on = models.DateTimeField(auto_now=True)
     overview = models.TextField()

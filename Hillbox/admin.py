@@ -7,7 +7,6 @@ from .models import FlyingSite, Comment, Photo, PhotoComment
 # this is the admin for the FlyingSite 
 @admin.register(FlyingSite)
 class FlyingSiteAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('site_name',)}
     actions = ['approve_sites']
     list_display = ('site_name', 'updated_on', 'approved', 'pilot')
     search_fields = ['site_name', 'wind_direction']
