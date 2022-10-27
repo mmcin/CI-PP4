@@ -60,7 +60,7 @@ def EditSite(request, site_id):
             if form.is_valid():
                 form.save(commit=False)
                 form.save()
-            return HttpResponseRedirect('/sites')
+            return HttpResponseRedirect('/edit_successful')
     else: 
         return redirect('not_authorised')
 
@@ -131,7 +131,7 @@ def EditComment(request, comment_id):
             if form.is_valid():
                 form.save(commit=False)
                 form.save()
-            return HttpResponseRedirect('/sites')
+            return HttpResponseRedirect('edit_successful')
     else: 
         return redirect('not_authorised')
     return render(request, 'site_comment_edit.html', {'form': form})
@@ -225,7 +225,7 @@ def EditGallery(request, photo_id, uploaded_by):
             if form.is_valid():
                 
                 form.save()
-                return HttpResponseRedirect('/gallery')
+                return HttpResponseRedirect('/edit_successful')
     else:
         return redirect('not_authorised')
     return render(request, 'gallery_edit.html', {'form': form})
@@ -240,7 +240,7 @@ def EditPhotoComment(request, comment_id):
             if form.is_valid():
                 form.save(commit=False)
                 form.save()
-            return HttpResponseRedirect('/gallery')
+            return HttpResponseRedirect('/edit_successful')
     else: 
         return redirect('not_authorised')
     return render(request, 'gallery_comment_edit.html', {'form': form})
