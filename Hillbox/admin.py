@@ -18,7 +18,6 @@ class FlyingSiteAdmin(admin.ModelAdmin):
 # this id the admin for the gallery images/photos
 @admin.register(Photo)
 class PhotoAdmin(admin.ModelAdmin):
-    prepopulated_fields = {'slug': ('site_name',)}
     actions = ['approve_photos']
     list_display = ('site_name', 'updated_on', 'approved')
     search_fields = ['site_name', 'wind_direction']

@@ -150,10 +150,10 @@ def DeleteComment(request, comment_id):
 
 # handles the detailed view of the images in gallery
 class PhotoDetail(View):
-    def get(self, request, slug, *args, **kwargs):
+    def get(self, request, site_name, *args, **kwargs):
         model = Photo
         queryset = Photo.objects.filter(status=1)
-        photo = get_object_or_404(queryset, slug = slug)
+        photo = get_object_or_404(queryset, site_name= site_name)
         comments = photo.comments.filter(approved=True).order_by("-created_on")
         return render(
             request,
@@ -165,9 +165,9 @@ class PhotoDetail(View):
             "comment_form": PhotoCommentForm(),
             }
         )
-    def post(self, request, slug, *args, **kwargs):
+    def post(self, request, site_name, *args, **kwargs):
         queryset = Photo.objects.filter(status=1)
-        photo = get_object_or_404(queryset, slug=slug)
+        photo = get_object_or_404(queryset, site_name=site_name)
         comments = photo.comments.filter(approved=True).order_by("-created_on")
         comment_form = PhotoCommentForm(data=request.POST)
         if comment_form.is_valid():

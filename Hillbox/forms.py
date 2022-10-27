@@ -11,7 +11,7 @@ class SiteUpload(forms.ModelForm):
 class GalleryUpload(forms.ModelForm):
     class Meta:
         model = Photo
-        fields = ('featured_image', 'site_name', 'status', 'slug')
+        fields = ('featured_image', 'site_name', 'status',)
 
 # this is the form to comment on a flying site
 class CommentForm(forms.ModelForm):

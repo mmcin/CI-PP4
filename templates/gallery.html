@@ -19,7 +19,7 @@
                 {% for photo in photo_list %}
                 {% if photo.approved %}
                 <div class="col-md-4" id="site-card">
-                    <a href="{% url 'photo_detail' photo.slug %}" class="post-link">
+                    <a href="{% url 'photo_detail' photo.site_name %}" class="post-link">
                         <div class="card shadow mb-4">
                             <div class="card-body" id="card">
                                 <div class="image-container">
