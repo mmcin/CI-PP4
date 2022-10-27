@@ -74,7 +74,7 @@ def DeleteSite(request, site_id):
         if request.method == "POST":
             form = SiteUpload(request.POST, instance = site)
             site.delete()
-            return HttpResponseRedirect('/sites')
+            return HttpResponseRedirect('/delete_successful')
     else:
         return redirect('not_authorised')
     return render(request, 'site_delete.html', {'form': form})
@@ -143,7 +143,7 @@ def DeleteComment(request, comment_id):
     if request.user.username == comment.name:
         if request.method == "POST":         
             comment.delete()
-            return HttpResponseRedirect('/sites')
+            return HttpResponseRedirect('delete_successful')
     else: 
         return redirect('not_authorised')
     return render(request, 'site_comment_delete.html', {'form': form})
@@ -210,7 +210,7 @@ def DeleteGallery(request, photo_id, uploaded_by):
         if request.method == "POST":
             form = GalleryUpload(request.POST, instance = photo)
             photo.delete()
-            return HttpResponseRedirect('/gallery')
+            return HttpResponseRedirect('/delete_successful')
     else:
         return redirect('not_authorised')
     return render(request, 'gallery_delete.html', {'form': form})  
@@ -252,7 +252,7 @@ def DeletePhotoComment(request, comment_id):
     if request.user.username == comment.name:
         if request.method == "POST":         
             comment.delete()
-            return HttpResponseRedirect('/gallery')
+            return HttpResponseRedirect('/delete_successful')
     else: 
         return redirect('not_authorised')
     return render(request, 'gallery_comment_delete.html', {'form': form}) 
