@@ -285,3 +285,10 @@ def EditSuccessful(request):
         request,
         "edit_successful.html",
     )
+
+# displays page after successful delete
+def DeleteSuccessful(request):
+    return render(
+        request,
+        "delete_successful.html",
+    )
