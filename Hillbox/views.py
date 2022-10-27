@@ -278,3 +278,10 @@ def Contacto(request):
 
     form = ContactForm()
     return render(request, "contact.html", {'form':form}) 
+
+# displays page after successful edit
+def EditSuccessful(request):
+    return render(
+        request,
+        "edit_successful.html",
+    )
