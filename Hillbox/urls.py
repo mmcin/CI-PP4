@@ -19,6 +19,7 @@ urlpatterns = [
     path('site_comment_edit/<comment_id>', views.EditComment, name='site_comment_edit'),
     path('site_comment_delete/<comment_id>', views.DeleteComment, name='site_comment_delete'),
     path('contact/', views.Contacto, name='contact'),
+    path('edit_successful', views.EditSuccessful, name='edit_successful'),
     
       
 ]
