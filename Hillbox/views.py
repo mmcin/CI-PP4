@@ -240,7 +240,7 @@ def EditPhotoComment(request, comment_id):
             if form.is_valid():
                 form.save(commit=False)
                 form.save()
-            return HttpResponseRedirect('/sites')
+            return HttpResponseRedirect('/gallery')
     else: 
         return redirect('not_authorised')
     return render(request, 'gallery_comment_edit.html', {'form': form})
@@ -252,7 +252,7 @@ def DeletePhotoComment(request, comment_id):
     if request.user.username == comment.name:
         if request.method == "POST":         
             comment.delete()
-            return HttpResponseRedirect('/sites')
+            return HttpResponseRedirect('/gallery')
     else: 
         return redirect('not_authorised')
     return render(request, 'gallery_comment_delete.html', {'form': form}) 
