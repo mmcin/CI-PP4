@@ -255,7 +255,7 @@ def DeletePhotoComment(request, comment_id):
             return HttpResponseRedirect('/sites')
     else: 
         return redirect('not_authorised')
-    return render(request, 'site_comment_delete.html', {'form': form}) 
+    return render(request, 'gallery_comment_delete.html', {'form': form}) 
 
 # handles the contact form and sends an email to the admin team 
 def Contacto(request):
