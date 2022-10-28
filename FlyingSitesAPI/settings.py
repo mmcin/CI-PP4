@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 ALLOWED_HOSTS = ['hillbox-pp4.herokuapp.com', '127.0.0.1']
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'

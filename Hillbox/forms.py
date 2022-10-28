@@ -18,12 +18,14 @@ class CommentForm(forms.ModelForm):
     class Meta: 
         model = Comment
         fields = ('body',)
+        
 
 # this is the form to comment on a gallery image
 class PhotoCommentForm(forms.ModelForm):
     class Meta:
         model = PhotoComment
         fields = ('body',)
+        body = forms.CharField(widget = forms.Textarea(attrs={"rows":10, "cols":25}))
 
 # this is the contact form
 class ContactForm(forms.Form):

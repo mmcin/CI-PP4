@@ -108,7 +108,7 @@ class SiteDetail(View):
             comment.site = site
             comment.save()
         else:
-            comment_form = CommentForm()
+            comment_form = CommentForm(attrs={"rows":5, "cols":20})
 
         return render(
             request,
