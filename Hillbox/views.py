@@ -200,7 +200,7 @@ def UploadGalleryImage(request):
             gallery_done = gallery_form.save(commit=False)
             gallery_done.save()
         return HttpResponseRedirect('/gallery')
-    return render(request, 'gallery_upload.html', {'form': gallery_form})
+    return render(request, 'gallery_upload.html', {'form': GalleryUpload()})
 
 # handles the deleting of a gallery image 
 def DeleteGallery(request, photo_id, uploaded_by):

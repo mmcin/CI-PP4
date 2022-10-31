@@ -1,12 +1,13 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 <!-- renders a form to upload a gallery image -->
 <div class="container-fluid contact-form" id="contact-form">
     <h1>Upload an Image to the Gallery</h1>
     <form method="post" action="." enctype="multipart/form-data">
+
+        {{ form | crispy }}
         {% csrf_token %}
-        {{form.as_p}}
         <button class="btn btn-signup btn-danger right">Submit</button>
     </form>
 </div>
