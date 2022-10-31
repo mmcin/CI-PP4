@@ -22,7 +22,7 @@
                     <a href="{% url 'photo_detail' photo.id %}" class="post-link">
                         <div class="card shadow mb-4">
                             <div class="card-body" id="card">
-                                <div class="image-container">
+                                <div class="image-container" id="image-container">
                                     {% if "placeholder" in photo.featured_image.url %}
                                     <img class="card-img-top"
                                         src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
