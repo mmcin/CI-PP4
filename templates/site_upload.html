@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 
 <div class="container-fluid contact-form" id="contact-form">
     <h1>Upload a Flying Site</h1>
     <form method="post" action="." enctype="multipart/form-data">
+        {{ site_form | crispy }}
         {% csrf_token %}
-        {{form.as_p}}
         <button class="btn btn-signup btn-danger right">Submit</button>
     </form>
 </div>

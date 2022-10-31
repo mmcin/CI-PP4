@@ -48,7 +48,7 @@ def UploadFlyingSite(request):
             site_done.save()
         return HttpResponseRedirect('/sites')
         
-    return render(request, 'site_upload.html', {'form': site_form})  
+    return render(request, 'site_upload.html', {'site_form': site_form})  
 
 # edit a site in flyingsite model
 def EditSite(request, site_id):
@@ -108,7 +108,7 @@ class SiteDetail(View):
             comment.site = site
             comment.save()
         else:
-            comment_form = CommentForm(attrs={"rows":5, "cols":20})
+            comment_form = CommentForm()
 
         return render(
             request,
