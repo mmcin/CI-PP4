@@ -56,7 +56,6 @@ I have used a scale of 1 to 5 for story points. 1 being the least effort involve
 
 ## Design
 ### Wireframes
-Homepage:
 ![Screenshot 2022-10-31 at 19 40 49](https://user-images.githubusercontent.com/98256205/199098676-8eec68d0-13ed-42dd-bd33-db191085ca8c.png)
 ![Screenshot 2022-10-31 at 19 52 14](https://user-images.githubusercontent.com/98256205/199098744-0482daf9-192b-4d20-ad0e-97cb07ed4cfa.png)
 ![Screenshot 2022-10-31 at 19 50 26](https://user-images.githubusercontent.com/98256205/199098748-a8fd436e-63bf-4368-a04b-e90445e5e930.png)
