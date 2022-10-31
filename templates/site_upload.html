@@ -2,7 +2,7 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-<div class="container-fluid contact-form" id="contact-form">
+<div class="container contact-form" id="contact-form">
     <h1>Upload a Flying Site</h1>
     <form method="post" action="." enctype="multipart/form-data">
         {{ site_form | crispy }}
