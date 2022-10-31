@@ -70,6 +70,10 @@ I have used a scale of 1 to 5 for story points. 1 being the least effort involve
 ### Database Schema
 ![Screenshot 2022-10-31 at 20 34 37](https://user-images.githubusercontent.com/98256205/199105261-70eaa53f-1f70-4d2a-8707-141dbcc1f00a.png)
 
+### Color Scheme
+![Screenshot 2022-10-31 at 20 40 03](https://user-images.githubusercontent.com/98256205/199106205-32e6aa31-5c54-4f68-a2e0-b5e718658aee.png)
+
+
 
 
 
