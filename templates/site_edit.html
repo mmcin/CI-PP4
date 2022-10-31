@@ -1,13 +1,13 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 {% if user.is_authenticated %}
 
 <div class="container-fluid contact-form" id="contact-form">
     <h1>Edit a Flying Site</h1>
     <form method="post" enctype="multipart/form-data">
+        {{ site_form | crispy }}
         {% csrf_token %}
-        {{form.as_p}}
         <button type='submit' class="btn btn-signup btn-danger right">Update Site</button>
     </form>
 </div>

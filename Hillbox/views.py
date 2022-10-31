@@ -64,7 +64,7 @@ def EditSite(request, site_id):
     else: 
         return redirect('not_authorised')
 
-    return render(request, 'site_edit.html', {'form': form})  
+    return render(request, 'site_edit.html', {'site_form': form})  
 
 # delete a site in flyingsite model
 def DeleteSite(request, site_id):
