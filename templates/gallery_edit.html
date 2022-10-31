@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-
+{% load crispy_forms_tags %}
 {% block content %}
 {% if user.is_authenticated and photo.username == photo.uploaded_by %}
 <div class="container-fluid contact-form" id="contact-form">
     <h1>Edit an Image in the Gallery</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
+        {{ form | crispy }}
         <button class="btn btn-signup btn-danger right">Submit</button>
     </form>
 </div>
