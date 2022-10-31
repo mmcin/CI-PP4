@@ -229,7 +229,7 @@ main {
     padding: 5px;
 }
 
-.card-img-top {
+.card-img-basic {
     max-height: 200px;
     object-fit: cover;
 }

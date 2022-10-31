@@ -14,7 +14,7 @@
                             <div class="image-container">
                                 <!-- if the entry doesn't have an image a placeholder will be displayed -->
                                 {% if "placeholder" in site.featured_image.url %}
-                                <img class="card-img-top"
+                                <img class="card-img-top card-img-basic"
                                     src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
                                 {% else %}
                                 <img class="card-img-top" src=" {{ site.featured_image.url }}">
