@@ -64,3 +64,17 @@ I have used a scale of 1 to 5 for story points. 1 being the least effort involve
 ![Screenshot 2022-10-31 at 19 48 14](https://user-images.githubusercontent.com/98256205/199098896-89b9db9e-b344-4cde-83ba-24ee3a9314dc.png)
 ![Screenshot 2022-10-31 at 19 47 48](https://user-images.githubusercontent.com/98256205/199098899-bf88b105-f916-42fc-ba88-a842967c9e54.png)
 
+### Site Navigation
+![Screenshot 2022-10-31 at 20 14 36](https://user-images.githubusercontent.com/98256205/199101888-6c6888a0-eb62-43b9-8e41-c0cf62fa62a6.png)
+
+### Database Schema
+![Screenshot 2022-10-31 at 20 34 37](https://user-images.githubusercontent.com/98256205/199105261-70eaa53f-1f70-4d2a-8707-141dbcc1f00a.png)
+
+### Color Scheme
+![Screenshot 2022-10-31 at 20 40 03](https://user-images.githubusercontent.com/98256205/199106205-32e6aa31-5c54-4f68-a2e0-b5e718658aee.png)
+
+
+
+
+
+
