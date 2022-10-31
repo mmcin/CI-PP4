@@ -36,20 +36,24 @@ To find it simple to navigate and find information as well as add to existing in
 I have used a scale of 1 to 5 for story points. 1 being the least effort involved.
 
 ### Pilot 
-- Can contact admin team. 3
-- Can upload a new flying site. 4
-- Can edit a flying site that they have created. 4
-- Can delete a flying site that they have created. 3
-- Can upload a gallery image. 4
-- Can edit a gallery image that they have created. 4
-- Can delete a gallery image that they have created. 3
-- Can comment on a flying site. 4
-- Can delete a comment that they have posted on a flying site that they have created. 3
-- Can edit a comment that they have posted on a flying site that they have created. 4
-- Can comment on a gallery image. 4
-- Can delete a comment that they have posted on a gallery image that they have created. 3
-- Can edit a comment that they have posted on a gallery image that they have created. 4
+- As a user I want a contact form so that I can contact the admin team. 3
+- As a user I want to be able to access an upload form so that I can upload a flying site. 4
+- As a user I want access an edit form so that edit a flying site. 4
+- As a user I want access an delete form so that delete a flying site. 3
+- As a user I want to be able to access an upload form so that I can upload a gallery image. 4
+- As a user I want access an edit form so that edit a gallery image. 4
+- As a user I want access an delete form so that delete a flying site. 3
+- As a user I want a comment form so that I can leave comments on a flying site. 4
+- As a user I want a delete button so that I can delete my comments on flying sites. 3
+- As a user I want an edit comment button so that I can edit comments on a flying site. 4
+- As a user I want a comment form so that I can leave comments on a gallery image. 4
+- As a user I want a delete button so that I can delete my comments on gallery images. 3
+- As a user I want an edit comment button so that I can edit comments on a gallery image. 4
 - Can sign up/login. 2
 
 ### Admin
--As an admin I want an admin panel so that I can moderate the uploaded content and accounts. 1
+- As an admin I want an admin panel so that I can moderate the uploaded content and accounts. 1
+
+## Design
+### Wireframes
+
