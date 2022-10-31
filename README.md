@@ -32,3 +32,24 @@ To find it simple to navigate and find information as well as add to existing in
 - Users can search by wind direction.
 - Users can view local weather information for a site.
 
+## User Stories
+I have used a scale of 1 to 5 for story points. 1 being the least effort involved.
+
+### Pilot 
+- Can contact admin team. 3
+- Can upload a new flying site. 4
+- Can edit a flying site that they have created. 4
+- Can delete a flying site that they have created. 3
+- Can upload a gallery image. 4
+- Can edit a gallery image that they have created. 4
+- Can delete a gallery image that they have created. 3
+- Can comment on a flying site. 4
+- Can delete a comment that they have posted on a flying site that they have created. 3
+- Can edit a comment that they have posted on a flying site that they have created. 4
+- Can comment on a gallery image. 4
+- Can delete a comment that they have posted on a gallery image that they have created. 3
+- Can edit a comment that they have posted on a gallery image that they have created. 4
+- Can sign up/login. 2
+
+### Admin
+-As an admin I want an admin panel so that I can moderate the uploaded content and accounts. 1
