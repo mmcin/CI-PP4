@@ -47,7 +47,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid" id="comment-section">
+    <div class="container ml-auto mr-auto" id="comment-section">
         <div class="row">
             <div class="col">
                 <hr>
@@ -79,7 +79,7 @@
         </div>
         {% if user.is_authenticated %}
         <div class="row">
-            <div class="card mb-4 mt-3 p-0">
+            <div class="card mb-4 ml-auto mr-auto mt-3 p-0">
                 <div class="card-body">
                     <!-- if the comment was submitted then an alert is shown otherwise the comment input is shown-->
                     {% if commented %}
