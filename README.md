@@ -144,6 +144,10 @@ When the logged in user is the author, they may edit the posts.
 
 ### Delete Flying Site
 ![127 0 0 1_8000_delete_7](https://user-images.githubusercontent.com/98256205/199264636-4e0027c7-25af-4c21-928e-d7d154e1fcca.png)
+
+### Delete a comment
+![127 0 0 1_8000_gallery_comment_delete_3](https://user-images.githubusercontent.com/98256205/199266930-97a1a215-2225-405c-9eec-b14735434d8e.png)
+
  
 
 
