@@ -17,6 +17,12 @@ def index(request):
         "index.html",
     )
 
+def FormError(request):
+    return render(
+        request,
+        "form_error.html",
+    )
+
 # displays the error page when user doesn't have permissions
 def NotAuthorised(request):
     return render(
@@ -46,7 +52,9 @@ def UploadFlyingSite(request):
             site_form.instance.pilot = request.user
             site_done = site_form.save(commit=False)
             site_done.save()
-        return HttpResponseRedirect('/sites')
+            return HttpResponseRedirect('/sites')
+        else:
+            return HttpResponseRedirect('/form_error')
         
     return render(request, 'site_upload.html', {'site_form': site_form})  
 
