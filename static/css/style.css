@@ -231,3 +231,7 @@ main {
     max-height: 200px;
     object-fit: cover;
 }
+
+.montserrat {
+    font-family: 'Lato', sans-serif;
+}
