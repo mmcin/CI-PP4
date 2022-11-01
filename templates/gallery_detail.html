@@ -18,9 +18,11 @@
                             <div class="image-container">
                                 {% if "placeholder" in photo.featured_image.url %}
                                 <img class="card-img-top"
-                                    src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
+                                    src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg"
+                                    alt="A paraglider flying site">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ photo.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ photo.featured_image.url }}"
+                                    alt="A paraglider flying site">
                                 {% endif %}
                             </div>
                             <h2 class="card-title">{{ photo.site_name }}</h2>
@@ -62,8 +64,8 @@
                 </div>
                 <!-- if the logged in user is the author then edit and delete buttons will be displayed -->
                 {% if user.username == comment.name %}
-                <a href="/gallery_comment_edit/{{ comment.id }}"><button class="btn btn-primary">EDIT</button></a>
-                <a href="/gallery_comment_delete/{{ comment.id }}"><button class="btn btn-danger">DELETE</button></a>
+                <a href="/gallery_comment_edit/{{ comment.id }}" class="btn btn-primary">EDIT</a>
+                <a href="/gallery_comment_delete/{{ comment.id }}" class="btn btn-danger">DELETE</a>
                 {% endif %}
                 {% endfor %}
             </div>
