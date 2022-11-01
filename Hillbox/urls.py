@@ -22,6 +22,6 @@ urlpatterns = [
     path('contact/', views.Contacto, name='contact'),
     path('edit_successful', views.EditSuccessful, name='edit_successful'),
     path('delete_successful', views.DeleteSuccessful, name='delete_successful'),
-    
-      
+
+
 ]
