@@ -86,6 +86,33 @@ Lato: upload and contact forms.
 
 ## Features
 ### Homepage
+![127 0 0 1_8000_](https://user-images.githubusercontent.com/98256205/199226713-d1d921d0-1425-4e39-86ca-c85ec9adb83f.png)
+
+### Flying Sites
+![127 0 0 1_8000_sites_](https://user-images.githubusercontent.com/98256205/199226892-9a2eb18e-9cdc-4618-ac06-0b98aa361cf6.png)
+
+### Site detail
+![127 0 0 1_8000_sites_7_](https://user-images.githubusercontent.com/98256205/199227016-3406cd4b-ba74-4d1f-a255-984113d44687.png)
+
+### Gallery
+![127 0 0 1_8000_gallery_](https://user-images.githubusercontent.com/98256205/199227084-f6a7926a-f5d7-4ae0-8101-e5171f85017d.png)
+
+### Gallery detail
+![127 0 0 1_8000_gallery_4_](https://user-images.githubusercontent.com/98256205/199227176-69d89251-4538-4796-a477-53634bfcd7ec.png)
+
+### Contact Page
+![127 0 0 1_8000_contact_](https://user-images.githubusercontent.com/98256205/199227280-779d8fc7-f226-43ed-b2e0-0e258a2710f7.png)
+
+### Sign-in
+![127 0 0 1_8000_accounts_login_](https://user-images.githubusercontent.com/98256205/199227390-e8823f99-ab77-4bfb-aa12-0a58b7259b55.png)
+
+### Sign-out
+![127 0 0 1_8000_accounts_logout_](https://user-images.githubusercontent.com/98256205/199227701-1fa01702-47e1-4ac6-9b31-a7975ffcd82b.png)
+
+### Sign-up
+![127 0 0 1_8000_accounts_signup_](https://user-images.githubusercontent.com/98256205/199227834-a5a9ba07-2a7c-47f3-a20e-fecd532b1f64.png)
+
+ 
 
 
 
