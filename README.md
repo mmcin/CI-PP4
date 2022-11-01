@@ -144,6 +144,30 @@ When the logged in user is the author, they may edit the posts.
 
 ### Delete Flying Site
 ![127 0 0 1_8000_delete_7](https://user-images.githubusercontent.com/98256205/199264636-4e0027c7-25af-4c21-928e-d7d154e1fcca.png)
+
+### Delete a comment
+![127 0 0 1_8000_gallery_comment_delete_3](https://user-images.githubusercontent.com/98256205/199266930-97a1a215-2225-405c-9eec-b14735434d8e.png)
+
+## Future features
+- Password reset
+- Social media sign-in
+- Map location input and output for flying site upload form
+- Search by location/ wind direction
+- Pilot profiles
+
+## Testing
+### Homepage
+- I have manually tested every link on the homepage to ensure that it redirects to the appropriate url. 
+- I have tested that the "Sign in" buttons appear appropriately depending on login state.
+
+### Flying Sites
+- I have tested that only the approved sites can be seen in the listing.
+- I have tested that the "EDIT"/"DELETE" buttons only show for the user that is authenticated and is the creator.
+- I have tested that the "EDIT"/"DELETE" buttons perform the required function.
+- I have tested that images are resized appropriately prior to display for a good UX/UI.
+- I tested that the add site link performs its function and is exchanged for a sign in link if the user is not authenticated.
+- Checked that authentication related changes are in line with design.
+
  
 
 
