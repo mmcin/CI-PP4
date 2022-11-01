@@ -84,6 +84,11 @@ Lato: upload and contact forms.
 - There is a wiki image on the sample site "Claragh" from their page about the mountain.
 - There is an image taken by one of the club members in the gallery under the title "Old Head".
 
+## Features
+### Homepage
+
+
+
 
 
 
