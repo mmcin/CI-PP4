@@ -148,6 +148,13 @@ When the logged in user is the author, they may edit the posts.
 ### Delete a comment
 ![127 0 0 1_8000_gallery_comment_delete_3](https://user-images.githubusercontent.com/98256205/199266930-97a1a215-2225-405c-9eec-b14735434d8e.png)
 
+## Future features
+- Password reset
+- Social media sign-in
+- Map location input and output for flying site upload form
+- Search by location/ wind direction
+- Pilot profiles
+
  
 
 
