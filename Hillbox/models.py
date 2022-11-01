@@ -53,7 +53,7 @@ class Photo(models.Model):
     status = models.IntegerField(choices = STATUS, default = 0)
 
     class Meta:
-        ordering = [" - updated_on"]
+        ordering = ["-updated_on"]
 
 
     def __str__(self):
