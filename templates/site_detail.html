@@ -15,9 +15,11 @@
                                 <!-- if the entry doesn't have an image a placeholder will be displayed -->
                                 {% if "placeholder" in site.featured_image.url %}
                                 <img class="card-img-top card-img-basic"
-                                    src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
+                                    src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg"
+                                    alt="An image of a paragliding site">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ site.featured_image.url }}">
+                                <img class="card-img-top" src=" {{ site.featured_image.url }}"
+                                    alt="An image of a paragliding site">
                                 {% endif %}
                             </div>
                             <h2 id="wind-direction">{{ site.wind_direction }}</h2>
@@ -70,8 +72,8 @@
                     </div>
                     <!-- if the logged in user is the author then edit and delete buttons will be displayed -->
                     {% if user.username == comment.name %}
-                    <a href="/site_comment_edit/{{ comment.id }}"><button class="btn btn-primary">EDIT</button></a>
-                    <a href="/site_comment_delete/{{ comment.id }}"><button class="btn btn-danger">DELETE</button></a>
+                    <a href="/site_comment_edit/{{ comment.id }}" class="btn btn-primary">EDIT</a>
+                    <a href="/site_comment_delete/{{ comment.id }}" class="btn btn-danger">DELETE</a>
                     {% endif %}
                     {% endfor %}
                 </div>
@@ -100,6 +102,6 @@
             </div>
         </div>
     </div>
+</div>
 
-
-    {%endblock%}
+{%endblock%}
