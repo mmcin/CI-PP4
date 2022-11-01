@@ -21,33 +21,39 @@
                 {% for site in flyingsite_list %}
                 {% if site.approved %}
                 <div class="col-md-4" id="site-card">
-                    <a href="{% url 'site_detail' site.id %}" class="post-link">
-                        <div class="card shadow mb-4">
-                            <div class="card-body" id="card">
-                                <div class="image-container">
-                                    {% if "placeholder" in site.featured_image.url %}
-                                    <img class="card-img-top"
-                                        src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg">
-                                    {% else %}
-                                    <img class="card-img-top" src=" {{ site.featured_image.url }}">
-                                    {% endif %}
-                                </div>
-                                <h2 id="wind-direction">{{ site.wind_direction }}</h2>
-                                <h2 class="card-title" id="site-title">{{ site.site_name }}</h2>
-                                <hr>
 
-                                <p class="card-text text-muted h6">Updated on: {{ site.updated_on }}</p>
-                                <div class="image-flash">
-                                    <p class="author">Added by: {{ site.pilot }}</p>
-                                </div>
-                                <!-- edit and delete buttons that will only be shown if the user is the site author -->
-                                {% if user == site.pilot %}
-                                <a href="/edit/{{ site.id }}"><button class="btn btn-primary">EDIT</button></a>
-                                <a href="/delete/{{ site.id }}"><button class="btn btn-danger">DELETE</button></a>
+                    <div class="card shadow mb-4">
+                        <div class="card-body" id="card">
+                            <div class="image-container">
+                                {% if "placeholder" in site.featured_image.url %}
+                                <a href="{% url 'site_detail' site.id %}" class="post-link">
+                                    <img class="card-img-top"
+                                        src="https://xcmag.com/wp-content/uploads/2018/01/medellin.jpg"
+                                        alt="An image of a paragliding site">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'site_detail' site.id %}" class="post-link">
+                                    <img class="card-img-top" src=" {{ site.featured_image.url }}"
+                                        alt="An image of a paragliding site">
+                                </a>
                                 {% endif %}
                             </div>
+                            <h2 id="wind-direction">{{ site.wind_direction }}</h2>
+                            <h2 class="card-title" id="site-title">{{ site.site_name }}</h2>
+                            <hr>
+
+                            <p class="card-text text-muted h6">Updated on: {{ site.updated_on }}</p>
+                            <div class="image-flash">
+                                <p class="author">Added by: {{ site.pilot }}</p>
+                            </div>
+                            <!-- edit and delete buttons that will only be shown if the user is the site author -->
+                            {% if user == site.pilot %}
+                            <a href="/edit/{{ site.id }}" class="btn btn-primary">EDIT</a>
+                            <a href="/delete/{{ site.id }}" class="btn btn-danger">DELETE</a>
+                            {% endif %}
                         </div>
-                    </a>
+                    </div>
+
                 </div>
                 {% endif %}
                 {% if forloop.counter|divisibleby:3 %}
