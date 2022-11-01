@@ -155,6 +155,19 @@ When the logged in user is the author, they may edit the posts.
 - Search by location/ wind direction
 - Pilot profiles
 
+## Testing
+### Homepage
+- I have manually tested every link on the homepage to ensure that it redirects to the appropriate url. 
+- I have tested that the "Sign in" buttons appear appropriately depending on login state.
+
+### Flying Sites
+- I have tested that only the approved sites can be seen in the listing.
+- I have tested that the "EDIT"/"DELETE" buttons only show for the user that is authenticated and is the creator.
+- I have tested that the "EDIT"/"DELETE" buttons perform the required function.
+- I have tested that images are resized appropriately prior to display for a good UX/UI.
+- I tested that the add site link performs its function and is exchanged for a sign in link if the user is not authenticated.
+- Checked that authentication related changes are in line with design.
+
  
 
 
