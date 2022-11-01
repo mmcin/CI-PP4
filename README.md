@@ -118,6 +118,22 @@ Lato: upload and contact forms.
 ![127 0 0 1_8000_site_upload_](https://user-images.githubusercontent.com/98256205/199229097-2ffdf722-30c7-44f7-9114-b95ed4863df6.png)
 
 ### Gallery Upload
+![127 0 0 1_8000_gallery_upload_](https://user-images.githubusercontent.com/98256205/199261093-f8a7b93b-82d5-4fc9-89ff-d08e2ffac493.png)
+
+### Site comments (gallery comments are the same)
+![Screenshot 2022-11-01 at 14 46 00](https://user-images.githubusercontent.com/98256205/199261707-a1209873-aa8a-4f2a-baf6-c780780030b6.png)
+
+## Read
+See above for flying site and gallery image pages.
+
+## Update
+When the logged in user is the author, they may edit the posts.
+
+### Edit Site
+![Screenshot 2022-11-01 at 14 48 32](https://user-images.githubusercontent.com/98256205/199262261-bdab8af1-b086-46be-b31c-d9172a11c1f3.png)
+
+### Edit Gallery Image
+![Screenshot 2022-11-01 at 14 49 35](https://user-images.githubusercontent.com/98256205/199262434-9df72544-fd66-41ad-971d-ae67d3ad6d1a.png)
 
  
 
