@@ -38,7 +38,6 @@ nav a {
 
 .navbar-toggler-icon {
     color: #fafafa;
-    margin: 50 auto 0;
 }
 
 #hamburger-icon {
@@ -105,7 +104,6 @@ nav a {
     font-size: 2rem;
     margin: 0 auto;
     background-image: linear-gradient(-1deg, #cd454c, #e30713);
-    display: relative;
 }
 
 #footer a {

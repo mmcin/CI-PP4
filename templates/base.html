@@ -41,13 +41,13 @@
                 <span class="navbar-text nav-buttons">
                     {% if user.is_authenticated %}
                     <span id="user">You are logged in as: <span id="username">{{ user.username }}</span> </span>
-                    <a href="{% url 'account_logout' %}"><button class="btn btn-outline-light nav-buttons">SIGN
-                            OUT</button></a>
+                    <a href="{% url 'account_logout' %}" class="btn btn-outline-light nav-buttons">SIGN
+                        OUT</a>
                     {% else %}
-                    <a href="{% url 'account_signup' %}"><button class="btn btn-outline-light nav-buttons">SIGN
-                            UP</button></a>
-                    <a href="{% url 'account_login' %}"><button class="btn btn-outline-light nav-buttons">SIGN
-                            IN</button></a>
+                    <a href="{% url 'account_signup' %}" class="btn btn-outline-light nav-buttons">SIGN
+                        UP</a>
+                    <a href="{% url 'account_login' %}" class="btn btn-outline-light nav-buttons">SIGN
+                        IN</a>
                     {% endif %}
                 </span>
             </div>
