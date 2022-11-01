@@ -112,6 +112,13 @@ Lato: upload and contact forms.
 ### Sign-up
 ![127 0 0 1_8000_accounts_signup_](https://user-images.githubusercontent.com/98256205/199227834-a5a9ba07-2a7c-47f3-a20e-fecd532b1f64.png)
 
+## C.R.U.D.
+### Create
+### Site Upload
+![127 0 0 1_8000_site_upload_](https://user-images.githubusercontent.com/98256205/199229097-2ffdf722-30c7-44f7-9114-b95ed4863df6.png)
+
+### Gallery Upload
+
  
 
 
