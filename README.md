@@ -135,6 +135,9 @@ When the logged in user is the author, they may edit the posts.
 ### Edit Gallery Image
 ![Screenshot 2022-11-01 at 14 49 35](https://user-images.githubusercontent.com/98256205/199262434-9df72544-fd66-41ad-971d-ae67d3ad6d1a.png)
 
+### Edit Comment
+![127 0 0 1_8000_site_comment_edit_4](https://user-images.githubusercontent.com/98256205/199265774-5794d3d4-a49a-4aa6-9c75-52d3da6a4397.png)
+
 ## Delete
 ### Delete Gallery Image
 ![127 0 0 1_8000_gallery_delete_Admin_4](https://user-images.githubusercontent.com/98256205/199264252-234c3513-e3a0-441d-97a0-0674358c014f.png)
