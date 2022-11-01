@@ -73,6 +73,17 @@ I have used a scale of 1 to 5 for story points. 1 being the least effort involve
 ### Color Scheme
 ![Screenshot 2022-10-31 at 20 40 03](https://user-images.githubusercontent.com/98256205/199106205-32e6aa31-5c54-4f68-a2e0-b5e718658aee.png)
 
+### Typography:
+All fonts were obtained from the Google Fonts library. I chose the following fonts for the page:
+
+Monserrat: Site heading/logo, homepage.
+Lato: upload and contact forms.
+
+### Imagery:
+- The homepage features a paragliding image from Pexels.
+- There is a wiki image on the sample site "Claragh" from their page about the mountain.
+- There is an image taken by one of the club members in the gallery under the title "Old Head".
+
 
 
 
