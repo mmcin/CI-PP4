@@ -68,7 +68,9 @@ def EditSite(request, site_id):
             if form.is_valid():
                 form.save(commit=False)
                 form.save()
-            return HttpResponseRedirect('/edit_successful')
+                return HttpResponseRedirect('/edit_successful')
+            else:
+                return HttpResponseRedirect('/form_error')
     else: 
         return redirect('not_authorised')
 
@@ -207,8 +209,10 @@ def UploadGalleryImage(request):
             gallery_form.instance.uploaded_by = request.user
             gallery_done = gallery_form.save(commit=False)
             gallery_done.save()
-        return HttpResponseRedirect('/gallery')
-    return render(request, 'gallery_upload.html', {'form': GalleryUpload()})
+            return HttpResponseRedirect('/gallery')
+        else:
+            return HttpResponseRedirect('/form_error')
+    return render(request, 'gallery_upload.html', {'form': gallery_form})
 
 # handles the deleting of a gallery image 
 def DeleteGallery(request, photo_id, uploaded_by):
