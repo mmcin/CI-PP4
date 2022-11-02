@@ -184,10 +184,19 @@ When the logged in user is the author, they may edit the posts.
 - I tested that the add site link performs its function and is exchanged for a sign in link if the user is not authenticated.
 - Checked that authentication related changes are in line with design.
 
+### Browsers
+- I checked the site for compatibility on different browsers.
+- I have checked the responsiveness on different window sizes.
+
 ## Validator Testing
 - HTML files pass through the W3C validator with no issues found.
 - CSS files pass through the Jigsaw validator with no issues found.
 - Python files have been through the validator and have no issues.
+
+## Accessibility
+![Screenshot 2022-11-02 at 20 11 11](https://user-images.githubusercontent.com/98256205/199593078-452add27-e9a0-4c62-9bdf-42723a1e40a2.png)
+
+
  
 
 
