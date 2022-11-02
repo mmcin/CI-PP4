@@ -1,21 +1,27 @@
 from django.test import TestCase
-from .forms import SiteUpload, GalleryUpload
+from .forms import SiteUpload, GalleryUpload, ContactForm
 
 # class TestDjango(TestCase):
 
 #     def test_this_thing_works(self):
 #         self.assertEqual(1,0)
 
-class TestSiteUploadForm(TestCase):
+# form validation 
+class TestFormValidation(TestCase):
     def test_site_upload_form(self):
-        form = SiteUpload({'site_name': "", 'pilot': "jim", 'wind_direction': "N", 'overview':'gjhg', 'landing_information':'some text', 'warnings':'some text', 'featured_image':"", 'status':1})
+        form = SiteUpload({'site_name': "", 'pilot': "jim", 'wind_direction': "N", 'overview':'cornflakes', 'landing_information':'some text', 'warnings':'some text', 'featured_image':"", 'status':1})
         self.assertFalse(form.is_valid())
         self.assertIn('site_name', form.errors.keys())
         self.assertEqual(form.errors['site_name'][0], 'This field is required.')
 
-class TestGalleryForm(TestCase):
     def test_gallery_upload_form(self):
         form = GalleryUpload({'featured_image':"", 'site_name':"", 'status':1,})
         self.assertFalse(form.is_valid())
         self.assertIn('site_name', form.errors.keys())
         self.assertEqual(form.errors['site_name'][0], 'This field is required.')
+
+    def test_contact_form(self):
+        form = ContactForm({'first_name':"", 'email_address':"", 'message':"",})
+        self.assertFalse(form.is_valid())
+        self.assertIn('first_name', form.errors.keys())
+        self.assertEqual(form.errors['first_name'][0], 'This field is required.')
