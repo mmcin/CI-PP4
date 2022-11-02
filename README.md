@@ -155,7 +155,7 @@ When the logged in user is the author, they may edit the posts.
 - Search by location/ wind direction
 - Pilot profiles
 
-## Testing
+## Manual Testing
 ### Homepage
 - I have manually tested every link on the homepage to ensure that it redirects to the appropriate url. 
 - I have tested that the "Sign in" buttons appear appropriately depending on login state.
@@ -184,6 +184,9 @@ When the logged in user is the author, they may edit the posts.
 - I tested that the add site link performs its function and is exchanged for a sign in link if the user is not authenticated.
 - Checked that authentication related changes are in line with design.
 
+## Automated testing
+-I have tested the forms and some of the views as I experiment with automated testing. In the future I plan to have automated testing for the whole app.
+
 ### Browsers
 - I checked the site for compatibility on different browsers.
 - I have checked the responsiveness on different window sizes.
@@ -192,6 +195,10 @@ When the logged in user is the author, they may edit the posts.
 - HTML files pass through the W3C validator with no issues found.
 - CSS files pass through the Jigsaw validator with no issues found.
 - Python files have been through the validator and have no issues.
+
+## Fixed bugs
+- I had a bug with the images not being uploaded because I had missed off the FILES in the view response.
+- 
 
 ## Accessibility
 ![Screenshot 2022-11-02 at 20 35 23](https://user-images.githubusercontent.com/98256205/199597336-66794243-83a0-4258-9ae1-37f26402fd43.png)
