@@ -194,7 +194,8 @@ When the logged in user is the author, they may edit the posts.
 - Python files have been through the validator and have no issues.
 
 ## Accessibility
-![Screenshot 2022-11-02 at 20 11 11](https://user-images.githubusercontent.com/98256205/199593078-452add27-e9a0-4c62-9bdf-42723a1e40a2.png)
+![Screenshot 2022-11-02 at 20 35 23](https://user-images.githubusercontent.com/98256205/199597336-66794243-83a0-4258-9ae1-37f26402fd43.png)
+
 
 
  
