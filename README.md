@@ -167,11 +167,27 @@ When the logged in user is the author, they may edit the posts.
 - I have tested that images are resized appropriately prior to display for a good UX/UI.
 - I tested that the add site link performs its function and is exchanged for a sign in link if the user is not authenticated.
 - Checked that authentication related changes are in line with design.
-TBC
 
-Validator Testing
+### Gallery Images
+- I have tested that only the approved images can be seen in the listing.
+- I have tested that the "EDIT"/"DELETE" buttons only show for the user that is authenticated and is the creator.
+- I have tested that the "EDIT"/"DELETE" buttons perform the required function.
+- I have tested that images are resized appropriately prior to display for a good UX/UI.
+- I tested that the add site link performs its function and is exchanged for a sign in link if the user is not authenticated.
+- Checked that authentication related changes are in line with design.
+
+### Comments
+- I have tested that only the approved comments can be seen in the listing.
+- I have tested that the "EDIT"/"DELETE" buttons only show for the user that is authenticated and is the creator.
+- I have tested that the "EDIT"/"DELETE" buttons perform the required function.
+- I have tested that images are resized appropriately prior to display for a good UX/UI.
+- I tested that the add site link performs its function and is exchanged for a sign in link if the user is not authenticated.
+- Checked that authentication related changes are in line with design.
+
+## Validator Testing
 - HTML files pass through the W3C validator with no issues found.
 - CSS files pass through the Jigsaw validator with no issues found.
+- Python files have been through the validator and have no issues.
  
 
 
