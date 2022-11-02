@@ -167,7 +167,11 @@ When the logged in user is the author, they may edit the posts.
 - I have tested that images are resized appropriately prior to display for a good UX/UI.
 - I tested that the add site link performs its function and is exchanged for a sign in link if the user is not authenticated.
 - Checked that authentication related changes are in line with design.
+TBC
 
+Validator Testing
+- HTML files pass through the W3C validator with no issues found.
+- CSS files pass through the Jigsaw validator with no issues found.
  
 
 
