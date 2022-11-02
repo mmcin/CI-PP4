@@ -19,12 +19,19 @@ def index(request):
         "index.html",
     )
 
-
+#diplays an error if the form is not successful
 def FormError(request):
     return render(
         request,
         "form_error.html",
     )
+
+# if the contact form goes through
+def ContactSuccessful(request):
+    return render(
+        request,
+        "contact_successful.html",
+    )    
 
 # displays the error page when user doesn't have permissions
 
@@ -308,8 +315,8 @@ def DeletePhotoComment(request, comment_id):
 
 
 def Contacto(request):
+    form = ContactForm(request.POST)
     if request.method == 'POST':
-        form = ContactForm(request.POST)
         if form.is_valid():
             subject = "Website Inquiry"
             body = {
@@ -325,9 +332,8 @@ def Contacto(request):
                         os.environ.get("RECEIVE_EMAIL")])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect("contact")
+            return redirect("contact_successful")
 
-    form = ContactForm()
     return render(request, "contact.html", {'form': form})
 
 # displays page after successful edit
