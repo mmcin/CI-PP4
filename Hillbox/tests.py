@@ -1,5 +1,6 @@
 from django.test import TestCase
 from .forms import SiteUpload, GalleryUpload, ContactForm
+from .models import FlyingSite
 
 # class TestDjango(TestCase):
 
@@ -38,6 +39,19 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'site_list.html')
 
+    def test_add_site(self):
+        response = self.client.get("/site_upload", follow=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'site_upload.html')
+
+# cant get this working yet
+    # def test_edit_site(self):
+    #     site = FlyingSite.objects.create({"site_name": "woo", 'pilot': "jim", "wind_direction": "N", "overview":"cornflakes", "landing_information":"some text", "warnings":"some text", "featured_image":"hello.jpeg", "status":1})
+    #     response = self.client.get(f"/edit/{site.id}", follow = True)
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertTemplateUsed(response, 'site_edit.html')
+
+    # def test_delete_site(self):
 
     def test_get_form_error(self):
         response = self.client.get("/form_error")
@@ -49,8 +63,3 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'contact.html')
 
-    # def test_add_site(self):
-
-    # def test_edit_site(self):
-
-    # def test_delete_site(self):

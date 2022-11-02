@@ -6,7 +6,7 @@ if os.path.isfile('env.py'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = True
+DEBUG = False
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 ALLOWED_HOSTS = ['hillbox-pp4.herokuapp.com', '127.0.0.1']
 SITE_ID = 1
@@ -66,15 +66,15 @@ WSGI_APPLICATION = 'FlyingSitesAPI.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 
 # Password validation
