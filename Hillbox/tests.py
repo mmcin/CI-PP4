@@ -25,3 +25,15 @@ class TestFormValidation(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('first_name', form.errors.keys())
         self.assertEqual(form.errors['first_name'][0], 'This field is required.')
+
+# views
+class TestViews(TestCase):
+    def test_get_flying_sites(self):
+        response = self.client.get("/")
+        self.assertEqual(response.status_code, 200)
+
+    # def test_add_site(self):
+
+    # def test_edit_site(self):
+
+    # def test_delete_site(self):
