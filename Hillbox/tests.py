@@ -28,9 +28,26 @@ class TestFormValidation(TestCase):
 
 # views
 class TestViews(TestCase):
-    def test_get_flying_sites(self):
+    def test_get_homepage(self):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
+
+    def test_get_sites(self):
+        response = self.client.get("/sites", follow=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'site_list.html')
+
+
+    def test_get_form_error(self):
+        response = self.client.get("/form_error")
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'form_error.html')
+
+    def test_get_contact_page(self):
+        response = self.client.get("/contact", follow=True)
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'contact.html')
 
     # def test_add_site(self):
 
