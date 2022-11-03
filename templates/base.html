@@ -41,7 +41,7 @@
                 </ul>
                 <span class="navbar-text nav-buttons">
                     {% if user.is_authenticated %}
-                    <span id="user">You are logged in as: <span id="username">{{ user.username }}</span> </span>
+                    <span id="username">You are logged in as: {{ user.username }}</span>
                     <a href="{% url 'account_logout' %}" class="btn btn-outline-light nav-buttons">SIGN
                         OUT</a>
                     {% else %}
