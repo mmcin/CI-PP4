@@ -274,6 +274,10 @@ The live link for "Hillbox" can be found [HERE](https://hillbox-pp4.herokuapp.co
 - https://www.youtube.com/watch?v=jCM-m_3Ysqk This chap, I was in and out of his videos as I got to grips with Django.
 - The Munster Kestrels freeflight group for their mentoring and support during my freeflight activities.
 
+## Images
+- Quang Nguyen Vinh's image from Pexels for the homepage.
+- An image from Wiki for the Clara flying Site.
+- An image from the Munster Kestrels in the gallery with permission.
 
  
 
