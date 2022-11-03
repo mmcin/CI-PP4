@@ -73,6 +73,13 @@ To find it simple to navigate and find information as well as add to existing in
 - Users can search by wind direction.
 - Users can view local weather information for a site.
 
+## Epics
+- Create an authorisation system
+- Create a flying site crud function
+- Create a gallery crud function
+- Allow user to contact staff
+- Build an intuitive UI
+
 ## User Stories
 I have used a scale of 1 to 5 for story points. 1 being the least effort involved.
 
