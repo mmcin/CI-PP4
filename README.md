@@ -6,7 +6,35 @@ Hillbox is a place for freeflight pilots (paraglider, hang-glider) to store info
 Please view the live website here: [Hillbox](https://hillbox-pp4.herokuapp.com/ "Hillbox Homepage").
 
 ## Table of contents
-
++ [UX](#ux)
+  + [Site Purpose](#site-purpose)
+  + [Site Goal](#site-goal)
+  * [Audience](#audience)
+  * [Communication](#communication)
+  * [Current User Goals](#current-user-goals)
+  * [New User Goals](#new-user-goals)
+  * [Future Goals](#future-goals)
+* [User Stories](#user-stories)
+  * [Pilot](#pilot)
+  * [Admin](#admin)
+* [Design](#design)
+  * [Wireframes](#wireframes)
+  * [Site Navigation](#site-navigation)
+  * [Database Schema](#database-schema)
+  * [Color Scheme](#color-scheme)
+  * [Typeography](#typography)
+  * [Imagery](#imagery)
+* [Features](#features)
+  * [Homepage](#homepage)
+  * [Flying Sites](#flying-sites)
+  * [Site Detail](#site-detail)
+  * [Gallery](#gallery)
+  * [Gallery Detail](#gallery-detail)
+  * [Contact](#contact-page)
+  * [Sign-In](#sign-in)
+  * [Sign-Out](#sign-out)
+  * [Sign-Up](#sign-up)
+  
 ## UX
 ### Site Purpose
 The site allows for information about a freeflight location to be uploaded and shared with other users. There is an image gallery also. Both of these features allow commenting in order to allow users to add important information to uploaded items.
