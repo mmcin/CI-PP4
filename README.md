@@ -34,7 +34,20 @@ Please view the live website here: [Hillbox](https://hillbox-pp4.herokuapp.com/ 
   * [Sign-In](#sign-in)
   * [Sign-Out](#sign-out)
   * [Sign-Up](#sign-up)
-  
+* [C.R.U.D.](#crud)
+  * [Create](#create)
+  * [Read](#read)
+  * [Update](#update)
+  * [Delete](#delete)
+* [Future Features](#future-features)
+* [Manual Testing](#manual-testing)
+* [Automated Testing](#automated-testing)
+* [Validator Testing](#fixed-bugs)
+* [Accessibility](#accessibility)
+* [Technologies Used](#technologies-used)
+* [Deployment](#deployment)
+* [Credits](#credits)
+
 ## UX
 ### Site Purpose
 The site allows for information about a freeflight location to be uploaded and shared with other users. There is an image gallery also. Both of these features allow commenting in order to allow users to add important information to uploaded items.
