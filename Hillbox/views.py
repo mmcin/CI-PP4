@@ -26,6 +26,13 @@ def FormError(request):
         "form_error.html",
     )
 
+# upload successful page
+def UploadSuccessful(request):
+    return render(
+        request,
+        "upload_successful.html",
+    )
+
 # if the contact form goes through
 def ContactSuccessful(request):
     return render(
@@ -70,7 +77,7 @@ def UploadFlyingSite(request):
             site_form.instance.pilot = request.user
             site_done = site_form.save(commit=False)
             site_done.save()
-            return HttpResponseRedirect('/sites')
+            return HttpResponseRedirect('/upload-successful')
         else:
             return HttpResponseRedirect('/form_error')
 
@@ -243,7 +250,7 @@ def UploadGalleryImage(request):
             gallery_form.instance.uploaded_by = request.user
             gallery_done = gallery_form.save(commit = False)
             gallery_done.save()
-            return HttpResponseRedirect('/gallery')
+            return HttpResponseRedirect('/upload-successful')
         else:
             return HttpResponseRedirect('/form_error')
     return render(request, 'gallery_upload.html', {'form': gallery_form})

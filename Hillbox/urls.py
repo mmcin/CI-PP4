@@ -5,6 +5,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('not_authorised', views.NotAuthorised, name='not_authorised'),
     path('form_error', views.FormError, name='form_error'),
+    path('upload-successful', views.UploadSuccessful, name='upload_successful'),
     path('sites/', views.SiteList.as_view(), name='sites'),
     path('gallery/', views.PhotoList.as_view(), name='gallery'),
     path('gallery/<slug:id>/', views.PhotoDetail.as_view(), name='photo_detail'),
