@@ -18,7 +18,7 @@
 
 nav {
     border-top: 1px solid #fafafa;
-    background-image: linear-gradient(-360deg, #af3239fe, #95060d);
+    background-image: linear-gradient(-360deg, #af3239fe, #bd060f);
     font-family: 'Montserrat', sans-serif;
     color: #fafafa;
     font-weight: 400;
@@ -103,7 +103,7 @@ nav a {
     color: #fafafa !important;
     font-size: 2rem;
     margin: 0 auto;
-    background-image: linear-gradient(-360deg, #af3239fe, #95060d);
+    background-image: linear-gradient(-360deg, #af3239fe, #bc0811);
 }
 
 #footer a {
