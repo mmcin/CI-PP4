@@ -243,7 +243,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 - Install Cloudinary: pip3 install dj3-cloudinary-storage
 - Creating the requirements.txt file with the following command: pip3 freeze --local > requirements.txt
 - A django project was created using: django-admin startproject printstatements 
-- The blog app was then created with: python3 manage.py startapp blog
+- The Hillbox app was then created with: python3 manage.py startapp blog
 - Which was then added to the settings.py file within our project directory
 - The changes were then migrated using: python3 manage.py migrate.
 - Navigated to Heroku & created a new app called print-statements.
@@ -264,6 +264,15 @@ key: DATABASE_URL | value: value supplied by Heroku
 
 The live link for "Hillbox" can be found [HERE](https://hillbox-pp4.herokuapp.com/)
 
+## Credits
+### Content
+- Martina Terlevic (my mentor), for helping me to understand authorisation requirements and security risks. Also for her great advice in all things code.
+- Daisy for helping me to understand relational databases and SQL.
+- Michael Mc for reviewing my project and listening to me whine about it.
+- Code Institute (especially the Django blog) which helped me to understand how it all comes together.
+- https://www.youtube.com/watch?v=dnhEnF7_RyM For teaching me to set up Django Email.
+- https://www.youtube.com/watch?v=jCM-m_3Ysqk This chap, I was in and out of his videos as I got to grips with Django.
+- The Munster Kestrels freeflight group for their mentoring and support during my freeflight activities.
 
 
  
