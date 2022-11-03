@@ -197,8 +197,11 @@ When the logged in user is the author, they may edit the posts.
 - Python files have been through the validator and have no issues.
 
 ## Fixed bugs
-- I had a bug with the images not being uploaded because I had missed off the FILES in the view response.
-- 
+- I had a bug with the images not being uploaded because I had missed adding the FILES in a view parameter.
+- I had implemented a method of authorisation that meant that anybody could delete or edit things by pasting in the link. I fixed this with some conditional statements in the template and view that checked that the author was the current logged in user.
+- All posts were showing whether they were approved or not so I added a conditional to the template that only let approved posts through.
+- I had a problem because I named the app "sites". When I went to install allauth I discovered that it needed the name "sites". I couldn't figure out how to change the app name so I had to start again and build the project from scratch.
+- I had an issue with crispy forms not being responsive. Eventually, I realised that I had missed the bootstrap template from the settings. 
 
 ## Accessibility
 ![Screenshot 2022-11-02 at 20 35 23](https://user-images.githubusercontent.com/98256205/199597336-66794243-83a0-4258-9ae1-37f26402fd43.png)
