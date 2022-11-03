@@ -131,7 +131,7 @@ class SiteDetail(View):
             }
         )
 # posts the comments to the flying site model
-
+# taken from ci blog walkthrough and adapted
     def post(self, request, id, *args, **kwargs):
         queryset = FlyingSite.objects.filter(status = 1)
         site = get_object_or_404(queryset, id = id)
@@ -206,7 +206,7 @@ class PhotoDetail(View):
                 "comment_form": PhotoCommentForm(),
             }
         )
-
+# taken from ci blog walkthrough and adapted
     def post(self, request, id, *args, **kwargs):
         queryset = Photo.objects.filter(status = 1)
         photo = get_object_or_404(queryset, id = id)
@@ -313,7 +313,7 @@ def DeletePhotoComment(request, comment_id):
 
 # handles the contact form and sends an email to the admin team
 
-
+# https://www.youtube.com/watch?v=dnhEnF7_RyM taught this
 def Contacto(request):
     form = ContactForm(request.POST)
     if request.method == 'POST':

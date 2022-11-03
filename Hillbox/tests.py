@@ -3,7 +3,7 @@ from .forms import SiteUpload, GalleryUpload, ContactForm
 from .models import FlyingSite
 
 # form validation
-
+# test ideas came from ci django testing 
 
 class TestFormValidation(TestCase):
     def test_site_upload_form(self):

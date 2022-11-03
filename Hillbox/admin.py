@@ -1,5 +1,6 @@
 from django.contrib import admin
 
+# i learned admin from ci blod walkthrough
 # Register your models here.
 from django.contrib import admin
 from .models import FlyingSite, Comment, Photo, PhotoComment

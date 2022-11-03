@@ -60,7 +60,7 @@ class Photo(models.Model):
         return self.site_name
 
 # comments related to the flying site model
-
+# i leaned on ci blog walkthrough for comments
 
 class Comment(models.Model):
     site = models.ForeignKey(
