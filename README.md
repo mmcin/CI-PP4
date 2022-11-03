@@ -206,6 +206,64 @@ When the logged in user is the author, they may edit the posts.
 ## Accessibility
 ![Screenshot 2022-11-02 at 20 35 23](https://user-images.githubusercontent.com/98256205/199597336-66794243-83a0-4258-9ae1-37f26402fd43.png)
 
+## Technologies Used
+### Main Languages Used
+- HTML5
+- CSS3
+- Javascript
+- Python
+- Django
+- SQL - Postgres
+
+### Frameworks, Libraries & Programs Used
+- Google Fonts - for the font families:
+- Font Awesome - to add icons to the social links in the footer element.
+- VSC - to edit my code before pushing the project to Github.
+- GitHub - to store my repository for submission.
+- Balsamiq - were used to create mockups of the project prior to starting.
+- Am I Responsive? - to ensure the project looked good across all devices.
+- Favicon - to provide the code & image for the icon in the tab bar.
+- Django
+- Bootstrap
+- DrawSQL
+
+### Installed Packages:
+- 'django<4' gunicorn
+- dj_database_url psycopg2
+- dj3-cloudinary-storage
+- django-summernote (link)
+- django-allauth (link)
+- django-crispy-forms(link)
+
+## Deployment
+The site was deployed to Heroku. The steps to deploy are as follows:
+
+- Install Django & Gunicorn: pip3 install 'django<4' gunicorn
+- Install Django database & psycopg: pip3 install dj_database_url psycopg2
+- Install Cloudinary: pip3 install dj3-cloudinary-storage
+- Creating the requirements.txt file with the following command: pip3 freeze --local > requirements.txt
+- A django project was created using: django-admin startproject printstatements 
+- The blog app was then created with: python3 manage.py startapp blog
+- Which was then added to the settings.py file within our project directory
+- The changes were then migrated using: python3 manage.py migrate.
+- Navigated to Heroku & created a new app called print-statements.
+- Added the Heroku Postgres database to the Resources tab.
+- Navigated to the Settings Tab, to add the following key/value pairs to the configvars:
+key: SECRET_KEY | value: randomkey
+key: PORT | value: 8000
+key: CLOUDINARY_URL | value: API environment variable
+key: DATABASE_URL | value: value supplied by Heroku
+- Added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file 
+- Added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
+- Add an import os statement for the env.py file.
+- Added Heroku to the ALLOWED_HOSTS in settings.py
+- Created the Procfile
+- Pushed the project to Github
+- Connected my github account to Heroku through the Deploy tab
+- Connected my github project repository, and then clicked on the "Deploy" button
+
+The live link for "Hillbox" can be found [HERE](https://hillbox-pp4.herokuapp.com/)
+
 
 
  
